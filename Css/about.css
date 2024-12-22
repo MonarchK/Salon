@@ -1,0 +1,28 @@
+#vid{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#vide{
+    max-width: 70%;
+}
+
+video{
+    max-width: 100%;
+    height: 250px;
+}
+
+#navbar{
+    margin-bottom: 150px;
+}
+
+@media only screen and (min-width: 961px){
+    #navbar{
+        margin-bottom: 30px;
+    }
+
+    video{
+        height: 100%;
+    }
+}
