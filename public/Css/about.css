@@ -1,0 +1,35 @@
+#vid{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#vide{
+    max-width: 70%;
+}
+
+video{
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+#navbar{
+    margin-bottom: 150px;
+}
+
+@media only screen and (min-width: 961px){
+    #navbar{
+        margin-bottom: 30px;
+    }
+
+    #vid{
+        aspect-ratio: 16/9;
+    }
+
+    video{
+        height: 65vh;
+        width: 65vh;
+        object-fit: cover;
+    }
+}

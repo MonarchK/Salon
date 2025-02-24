@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{/*places the background image while ensuring it covers the entire page*/
+    background-image: url("../Pictures/background/Spidey.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#navbar{/*distances logo from links*/
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+}
+
+#logo{
+    background-image: url("../Pictures/logo.png");
+    min-height: 10vh;
+    min-width: 10vh;
+    background-size: cover;
+    background-position: center;
+    margin-left: 10px;
+}
+
+.link-toggle{/*possitions mobile links*/
+    position: relative;
+    padding-right: 30px;
+    font-size: 28px;
+    bottom: 20px;
+}
+
+#link-list{/*prevents link list from being seen*/
+    display: none;
+}
+
+.link-toggle:hover #link-list{/*lets link list be seen if user clicks hamburger menu*/
+    position: fixed;
+    top: -0px;
+    right: 0px;
+    background: white;
+    min-height: 100vh;
+    min-width: 85vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+/*pretty print*/
+
+#links a{
+    text-decoration: none;
+    color: black;
+}
+
+#links a:active, #links a:hover{
+    color: gold;
+}
+
+#links li{
+    list-style: none;
+}
+
+.move{/*positions link list*/
+    padding-top: 50px;
+    padding-left: 30px;
+}
+
+@media only screen and (min-width: 961px) {
+
+    #logo{
+        position: relative;
+        bottom: 25px;
+    }
+    
+    #link-listd{/*positions link list*/
+        position: absolute;
+        top: 00px;
+        right: 0px;
+        display: flex;
+        margin-right: 40px;
+    }
+
+    /*pretty print*/
+
+    #link-listd li{
+        list-style: none;
+    }
+
+    #link-listd a{
+        text-decoration: none;
+        color: black;
+    }
+
+    #link-listd a:hover{
+        color: gold;
+    }
+
+    .link-toggle{
+        display: none;
+    }
+
+}

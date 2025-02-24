@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Services</title>
+        <link rel="stylesheet" href="/Css/services.css" />
+        <%- include('layouts/head.ejs') %>
+    </head>
+    <body>
+        <%- include('layouts/navbar.ejs') %>
+        <div id="main">
+            <h1>Services</h1>
+            <div id="container">
+                <% for(var n = 0; n < allServices.length; n++){%>     
+                    <div class="images">
+                        <%if(login){%>
+                            <div class="image-box" onclick="window.location.href='/services/<%= allServices[n]._id %>'">
+                                <img class="img" src="<%= allServices[n].image %>" />
+                                <p class="name"><%= allServices[n].service %></p>
+                            </div>
+                        <%}else{%>
+                            <div class="image-box" >
+                                <img class="img" src="<%= allServices[n].image %>" />
+                                <p class="name"><%= allServices[n].service %></p>
+                            </div>
+                        <%}%>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+        <% if(login){%>
+            <button onclick="window.location.href='/service/new'"><i class="fas fa-plus"></i></button>
+        <%}%>
+        <%- include('layouts/scripts.ejs') %>
+    </body>
+</html>

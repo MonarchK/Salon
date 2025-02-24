@@ -1,0 +1,20 @@
+<div id="navbar">
+    <a href="/"><div id="logo"></div></a>
+    <ul id="links">
+        <li class="link-toggle"><span>&#8801;</span>
+            <ul id="link-list">
+                <li class="move"><a href="/">Home</a></li>
+                <li class="move"><a href="/about">About</a></li>
+                <li class="move"><a href="/services">Services</a></li>
+                <li class="move"><a href="/shop">Shop</a></li>
+                <li class="move"><a href="/contact">Contact</a></li>
+                <% if(login){%>
+                    <li class="move"><a href="/user/new">New</a></li>
+                    <li class="move"><a href="/auth/logout">Logout</a></li>
+                <%}else{%>
+                    <li class="move"><a href="/auth/login">Login</a></li>
+                <%}%>
+            </ul>
+        </li>  
+    </ul>
+</div>

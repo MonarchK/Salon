@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Change Services</title>
+        <%- include('layouts/head.ejs') %>
+    </head>
+    <body>
+        <%- include('layouts/navbar.ejs') %>
+        <h1>Change Service details</h1>
+        <form action="/services/<%= service._id %>" method="POST" enctype="multipart/form-data">
+            <% if(error && error.length > 0){%>
+                <div class="alert alert-danger"><%= error %></div>
+            <%}%>
+            <div class="form-group">
+                <label for="service">Service: </label>
+                <input id="service" class="form-control" type="text" name="service" placeholder="Enter the name of the service..." />
+            </div>
+            <div class="form-group">
+                <label for="image">Image: </label>
+                <input type="file" class="form-control" id="image" name="image" />             
+            </div>
+            <button>Change</button>
+        </form>
+        <% if(login){%>
+            <button id="gone"><i class="fas fa-trash"></i></button>
+        <%}%>
+        <%- include('layouts/scripts.ejs') %>
+    </body>
+</html>
