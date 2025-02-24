@@ -15,7 +15,7 @@ module.exports = async (req,res)=>{
                 return res.status(500).send('Failed to upload file.');
             });
             if(service){
-                service.image = '/pictures/services/' + image.name;
+                service.image = loc;
                 await service.save();
             }
         }
