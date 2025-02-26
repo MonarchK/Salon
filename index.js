@@ -56,7 +56,7 @@ app.use(expressSession({
     resave: false,
     saveUninitialized: false,
     cookie: {
-        secure: false, //change to true if using https
+        secure: true, //change to true if using https
         maxAge: 60 * 60 * 1000 //1hr in millisecs
     } 
 }));
